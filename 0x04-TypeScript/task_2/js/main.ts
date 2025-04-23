@@ -64,3 +64,17 @@ console.log(createEmployee('$500')); // Director
 
 console.log(executeWork(createEmployee(200))); // Getting to work
 console.log(executeWork(createEmployee(1000))); // Getting to director tasks
+
+// String literal type and function for teaching subjects
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  return 'Teaching History';
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
