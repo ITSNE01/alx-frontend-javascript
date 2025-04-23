@@ -42,3 +42,30 @@ const director1: Directors = {
 console.log(director1);
 
 console.log(printTeacher("John", "Doe"));
+
+// StudentClass
+
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentInterface;
+}
+
+interface StudentInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass implements StudentInterface {
+  constructor(private firstName: string, private lastName: string) {}
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+const student = new StudentClass('Alice', 'Smith');
+console.log(student.displayName());
+console.log(student.workOnHomework());
